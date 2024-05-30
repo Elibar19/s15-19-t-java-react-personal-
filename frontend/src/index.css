@@ -71,3 +71,9 @@ button:focus-visible {
   max-width: 350px;
   width: 90%;
 }
+
+.text-ellipsis{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
