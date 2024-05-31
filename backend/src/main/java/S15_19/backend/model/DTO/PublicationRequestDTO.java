@@ -21,11 +21,9 @@ public class PublicationRequestDTO {
     private Integer id;
 
     @NotNull
-    @NotBlank
     private Category category;
 
     @NotNull
-    @NotBlank
     private Type type;
 
     @NotNull

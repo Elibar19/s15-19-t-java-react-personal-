@@ -29,9 +29,9 @@ public class PublicationController {
         return publicationService.findPublicationByTitle(title);
     }
 
-    @GetMapping(path="/findById")
+    @GetMapping(path="/{id}")
     public Optional<PublicationResponseDTO> findPublicationById(
-            @RequestParam Integer id){
+            @PathVariable("id") Integer id){
         return publicationService.findPublicationById(id);
     }
 

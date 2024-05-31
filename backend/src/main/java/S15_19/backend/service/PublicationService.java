@@ -80,7 +80,7 @@ public class PublicationService {
         userRepository.save(author);
 
         publicationRepository.delete(publication);
-        
+
         return Optional.of(new PublicationResponseDTO(publication));
     }
 

@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Table(name = "Publication")
 public class PublicationEntity {
 
     @Id
