@@ -24,27 +24,33 @@ public class PublicationController {
     }
 
     @GetMapping(path="/findByTitle")
-    public Optional<PublicationResponseDTO> findPublicationByTitle(@RequestParam String title){
+    public Optional<PublicationResponseDTO> findPublicationByTitle(
+            @RequestParam String title){
         return publicationService.findPublicationByTitle(title);
     }
 
     @GetMapping(path="/findById")
-    public Optional<PublicationResponseDTO> findPublicationById(@RequestParam Integer id){
+    public Optional<PublicationResponseDTO> findPublicationById(
+            @RequestParam Integer id){
         return publicationService.findPublicationById(id);
     }
 
     @PostMapping()
-    public Optional<PublicationResponseDTO> createPublication(@RequestBody @Valid PublicationRequestDTO publicationRequestDTO){
-        return publicationService.createPublication(publicationRequestDTO);
+    public Optional<PublicationResponseDTO> createPublication(
+            @RequestParam Integer userId,
+            @RequestBody @Valid PublicationRequestDTO publicationRequestDTO) throws Exception {
+        return publicationService.createPublication(userId, publicationRequestDTO);
     }
 
     @DeleteMapping()
-    public Optional<PublicationResponseDTO> deletePublication(@RequestParam Integer id) throws Exception {
+    public Optional<PublicationResponseDTO> deletePublication(
+            @RequestParam Integer id) throws Exception {
         return publicationService.deletePublication(id);
     }
 
     @PutMapping()
-    public Optional<PublicationResponseDTO> updatePublication(@RequestBody @Valid PublicationRequestDTO publicationRequestDTO) throws Exception {
+    public Optional<PublicationResponseDTO> updatePublication(
+            @RequestBody @Valid PublicationRequestDTO publicationRequestDTO) throws Exception {
         return publicationService.updatePublication(publicationRequestDTO);
     }
 

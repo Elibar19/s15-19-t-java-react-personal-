@@ -17,6 +17,10 @@ public class PublicationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity author;
+
     @Enumerated(EnumType.STRING)
     private Category category;
 
