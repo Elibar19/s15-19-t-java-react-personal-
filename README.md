@@ -1,7 +1,7 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=No-Country.s15-19-t-java-react" />
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=Elibar19.s15-19-t-java-react-personal-" />
 
 
-# StudyBuddy
+# MiTerapia
 
 Foto de logo etc.
 
