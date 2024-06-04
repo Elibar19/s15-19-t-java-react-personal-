@@ -77,17 +77,12 @@ Before cloning/forking this project, make sure you have the following tools inst
 
 - Backend
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=react,css,vscode,github,figma,tailwind,git,r" /><br>
-</div>
-
-- Frontend
-<div align="center">
-    <img src="https://skillicons.dev/icons?i=nodejs,python,express,firebase,mongodb,c,java,nextjs,mysql,flask" /><br>
+    <img src="https://skillicons.dev/icons?i=java,react,css,vscode,github,git,mysql" /><br>
 </div>
 
 - Testing
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=react,bootstrap,mui,html,css,vscode,github" /><br>
+    <img src="https://skillicons.dev/icons?i=bootstrap,mui,postman,jira" /><br>
 </div>
 
 
