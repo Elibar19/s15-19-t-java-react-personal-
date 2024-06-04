@@ -10,24 +10,29 @@ Foto de logo etc.
 
 __MiTerapia__: La aplicación para acompañarte en el cuidado de tu salud.
 
-MiTerapia es una aplicación diseñado para facilitar no solamente la gestión de citas médicas, si no también el seguimiento de medicamentos en un calendario por medio de recordatorios. 
+Es una aplicación diseñado para facilitar no solamente la gestión de citas médicas, si no también el seguimiento de medicamentos en un calendario por medio de recordatorios. 
 Pensado tanto para pacientes como para médicos, MiTerapia busca mejorar la gestión del cuidado de la salud facilitando herramientas utiles a los pacientes, como así también brindandoles información útil sobre sus enfermedades.
 
 
 ## Características
 
-1. **Búsqueda y Coincidencia de Estudiantes**
-   - Permite a los usuarios buscar y coincidir con otros estudiantes según cursos, asignaturas y niveles de estudio. Utiliza algoritmos inteligentes para sugerir compañeros de estudio ideales basados en intereses y disponibilidad.
+1. **Agenda de citas médicas**
+   - Permite a los pacientes y a los profesionales programar citas en un calendario con facilidad.
+   - Recordatorios automáticos para que los pacientes no se pierdan una consulta.
 
-2. **Calendario y Programación de Sesiones**
-   - Incluye un calendario integrado que permite a los usuarios programar sesiones de estudio, establecer recordatorios y sincronizar horarios con sus compañeros de grupo, asegurando una planificación eficiente y organizada.
+2. **Recordatorio de Medicamentos**
+   - Configura recordatorios personalizados para la toma de medicamentos.
+   - Asegura que los pacientes sigan sus tratamientos al pie de la letra.
 
-3. **Biblioteca de Recursos Compartidos**
-   - Proporciona un espacio donde los usuarios pueden subir, compartir y acceder a materiales de estudio, como apuntes, libros electrónicos y enlaces útiles, fomentando el intercambio de conocimientos y recursos educativos.
+3. **Programación de eventos**
+   - Posibilidad de agendar eventos importantes relacionados con la salud, como chequeos periódicos y sesiones de terapia.
 
-4. **Seguimiento de Progreso y Objetivos**
-   - Permite a los usuarios establecer metas de estudio y realizar un seguimiento de su progreso. Incluye herramientas para crear listas de tareas, marcar objetivos cumplidos y recibir notificaciones y estadísticas sobre su desempeño y avances.
-
+4. **Publicaciones médicas**
+   - Los médicos pueden publicar artículos informativos sobre diversas enfermedades y responder preguntas sobre las mismas.
+   - Los pacientes pueden leer, compartir y comentar sobre las publicaciones para mantenerse informados.
+     
+5. **Noticias y actualizaciones**
+   - Mantén a los pacientes al tanto de las últimas noticias y avances en el campo de la medicina.
 
 ## Demo
 
