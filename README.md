@@ -8,13 +8,10 @@ Foto de logo etc.
 
 ## Descripción de la App
 
-__StudyBuddy__ es tu solución definitiva para el aprendizaje colaborativo.
-Conéctate con otros estudiantes que comparten tus cursos, intereses y objetivos de estudio.
-Ya sea que necesites un compañero para un proyecto, un grupo para preparar exámenes o
-simplemente alguien con quien intercambiar ideas, StudyBuddy facilita la búsqueda y
-formación de grupos de estudio. Mejora tu experiencia de aprendizaje, aumenta
-tus calificaciones y haz que estudiar sea más agradable con StudyBuddy.
-¡Únete hoy y empieza a colaborar!
+__MiTerapia__: La aplicación para acompañarte en el cuidado de tu salud.
+
+MiTerapia es una aplicación diseñado para facilitar no solamente la gestión de citas médicas, si no también el seguimiento de medicamentos en un calendario por medio de recordatorios. 
+Pensado tanto para pacientes como para médicos, MiTerapia busca mejorar la gestión del cuidado de la salud facilitando herramientas utiles a los pacientes, como así también brindandoles información útil sobre sus enfermedades.
 
 
 ## Características
