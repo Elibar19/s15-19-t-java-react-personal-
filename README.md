@@ -1,4 +1,4 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=Elibar19.s15-19-t-java-react-personal-" />
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=Elibar19.s15-19-t-java-react-personal" />
 
 
 # MiTerapia
@@ -8,7 +8,6 @@ Foto de logo etc.
 
 ## Descripción de la App
 
-![descriptive alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 __StudyBuddy__ es tu solución definitiva para el aprendizaje colaborativo.
 Conéctate con otros estudiantes que comparten tus cursos, intereses y objetivos de estudio.
 Ya sea que necesites un compañero para un proyecto, un grupo para preparar exámenes o
@@ -47,7 +46,7 @@ Before cloning/forking this project, make sure you have the following tools inst
 - [NodeJS](https://nodejs.org/en/download/ "NodeJs Download Page")
 
 
-## Installación
+## Instalación
 
 1. Fork the project
 2. Clone the project
@@ -61,10 +60,10 @@ Before cloning/forking this project, make sure you have the following tools inst
 
 - Backend
 
-|                           <img src="https://avatars.githubusercontent.com/u/91564340?v=4" title="avatar-nh" width="80" height="80"><br/>Nicolás Huanca                           |                               <img src="https://avatars.githubusercontent.com/u/111662767?v=4" title="avatar-fs" width="80" height="80"><br/>Federico Sierra                                |                                 <img src="https://avatars.githubusercontent.com/u/122175106?v=4" title="avatar-eb" width="80" height="80"><br/>Elián Bargaz                                 |                               <img src="https://avatars.githubusercontent.com/u/115821790?v=4" title="avatar-gm" width="80" height="80"><br/>Gustavo Martinez                               |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| <a href="https://www.linkedin.com/in/nicolas-huanca/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | <a href="https://www.linkedin.com/in/federico-sierra-516030235/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | <a href="https://www.linkedin.com/in/federico-sierra-516030235/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | <a href="https://www.linkedin.com/in/federico-sierra-516030235/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | 
-|          <a href="https://github.com/nicolas2289h/"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>          |                <a href="https://github.com/federicojsd"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>                 |                  <a href="https://github.com/Elibar19"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>                  |                 <a href="https://github.com/trujisxd1"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>                  |
+|                           <img src="https://avatars.githubusercontent.com/u/91564340?v=4" title="avatar-nh" width="80" height="80"><br/>Nicolás Huanca                           |                               <img src="https://avatars.githubusercontent.com/u/111662767?v=4" title="avatar-fs" width="80" height="80"><br/>Federico Sierra                                |                                 <img src="https://avatars.githubusercontent.com/u/122175106?v=4" title="avatar-eb" width="80" height="80"><br/>Elián Bargaz                                 |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| <a href="https://www.linkedin.com/in/nicolas-huanca/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | <a href="https://www.linkedin.com/in/federico-sierra-516030235/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | <a href="https://www.linkedin.com/in/federico-sierra-516030235/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | 
+|          <a href="https://github.com/nicolas2289h/"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>          |                <a href="https://github.com/federicojsd"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>                 |                  <a href="https://github.com/Elibar19"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>                  |
 
 - Frontend
 
