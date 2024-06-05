@@ -4,6 +4,7 @@ import Login from "./components/Login";
 
 import Home from "./components/Home";
 import Welcome from "./components/Welcome";
+import CalendarPage from "./pages/CalendarPage";
 function App() {
   return (
     <div>
@@ -14,9 +15,9 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/welcome" element={<Welcome />} />
+          <Route path="/calendar" element={<CalendarPage />} />
         </Routes>
       </BrowserRouter>
-
     </div>
   );
 }

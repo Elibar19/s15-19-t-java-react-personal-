@@ -9,10 +9,10 @@ function NavBar() {
         <>
             <Navbar bg="light" data-bs-theme="light" className='border'>
                 <Container>
-                    <Navbar.Brand href="#home" onClick={() =>navigate('/home')}>Home</Navbar.Brand>
+                    <Navbar.Brand href="#home" onClick={() => navigate('/home')}>Home</Navbar.Brand>
                     <Nav className="me-auto d-flex gap-2">
-                        <Nav.Link href="#features">Modulo 1</Nav.Link>
-                        <Nav.Link href="#pricing">Modulo 2</Nav.Link>
+                        <Nav.Link onClick={() => navigate("/calendar")}>Calendario</Nav.Link>
+                        <Nav.Link>Modulo 2</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
