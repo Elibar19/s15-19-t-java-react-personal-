@@ -14,10 +14,10 @@ import static S15_19.backend.model.Role.USER;
 @NoArgsConstructor
 public class RegisterRequest {
     private String username;
-  /*private String firstName;
+    private String firstName;
     private String lastName;
     private String country;
-    private String email;*/
+    private String email;
     private String password;
     private Role role;
 }

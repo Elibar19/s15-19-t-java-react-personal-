@@ -1,5 +1,6 @@
 package S15_19.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -26,6 +27,10 @@ public class UserEntity implements UserDetails {
 
     @OneToMany(mappedBy = "author")
     private List<PublicationEntity> publications;
+
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<DiaryEntity> diaries;
 
     private String username;
 

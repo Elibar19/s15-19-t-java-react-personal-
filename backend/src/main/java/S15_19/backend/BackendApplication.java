@@ -17,30 +17,30 @@ public class BackendApplication {
 		SpringApplication.run(BackendApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner init(UserRepository userRepository){
-		return args -> {
-
-			//CREATE USERS
-			UserEntity userElian = UserEntity.builder()
-					.username("elian")
-					.firstName("elian")
-					.lastName("bargaz")
-					.country("argentina")
-					.password("$2a$10$Rn5dqssiYpaiRiKA30Hi..3ZU38waxJ.JAcoPwV06nSk06S6Vk6ly")
-					.role(Role.valueOf("ADMIN"))
-					.build();
-			UserEntity userValen = UserEntity.builder()
-					.username("elian2")
-					.firstName("elian2")
-					.lastName("bargaz2")
-					.country("argentina2")
-					.password("$2a$10$Rn5dqssiYpaiRiKA30Hi..3ZU38waxJ.JAcoPwV06nSk06S6Vk6ly")
-					.role(Role.valueOf("USER"))
-					.build();
-
-			userRepository.saveAll(List.of(userElian, userValen));
-		};
-	}
+//	@Bean
+//	CommandLineRunner init(UserRepository userRepository){
+//		return args -> {
+//
+//			//CREATE USERS
+//			UserEntity userElian = UserEntity.builder()
+//					.username("elian")
+//					.firstName("elian")
+//					.lastName("bargaz")
+//					.country("argentina")
+//					.password("$2a$10$Rn5dqssiYpaiRiKA30Hi..3ZU38waxJ.JAcoPwV06nSk06S6Vk6ly")
+//					.role(Role.valueOf("ADMIN"))
+//					.build();
+//			UserEntity userValen = UserEntity.builder()
+//					.username("elian2")
+//					.firstName("elian2")
+//					.lastName("bargaz2")
+//					.country("argentina2")
+//					.password("$2a$10$Rn5dqssiYpaiRiKA30Hi..3ZU38waxJ.JAcoPwV06nSk06S6Vk6ly")
+//					.role(Role.valueOf("USER"))
+//					.build();
+//
+//			userRepository.saveAll(List.of(userElian, userValen));
+//		};
+//	}
 
 }
