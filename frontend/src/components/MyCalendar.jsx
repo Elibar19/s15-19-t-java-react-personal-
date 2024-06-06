@@ -43,8 +43,9 @@ const MyCalendar = () => (
       events={myEventsList}
       startAccessor="start"
       endAccessor="end"
-      style={{ height: 500 }}
+      style={{ height: 450 }}
       messages={messages}
+      className='mt-5 shadow'
     />
   </div>
 );

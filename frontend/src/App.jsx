@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "./components/Register";
 import Login from "./components/Login";
-
+import NavBar from "./components/NavBar"
 import Home from "./components/Home";
 import Welcome from "./components/Welcome";
 import CalendarPage from "./pages/CalendarPage";
@@ -9,6 +9,8 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <NavBar />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
