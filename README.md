@@ -69,10 +69,10 @@ Before cloning/forking this project, make sure you have the following tools inst
 
 - Testing
 
-|                          <img src="https://avatars.githubusercontent.com/u/165205016?v=4" title="avatar-sm" width="80" height="80"><br/>Santiago Moreno                           |                               <img src="https://avatars.githubusercontent.com/u/111662767?v=4" title="avatar-fs" width="80" height="80"><br/>Nicolas Dutria                                |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| <a href="https://www.linkedin.com/in/santiagoamoreno/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | <a href="https://www.linkedin.com/in/federico-sierra-516030235/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
-|         <a href="https://github.com/SantiagoMoreno98"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>         |                <a href="https://github.com/federicojsd"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>                 |
+|                          <img src="https://avatars.githubusercontent.com/u/165205016?v=4" title="avatar-sm" width="80" height="80"><br/>Santiago Moreno                           |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| <a href="https://www.linkedin.com/in/santiagoamoreno/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
+|         <a href="https://github.com/SantiagoMoreno98"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>         |
 
 
 ## Stack
