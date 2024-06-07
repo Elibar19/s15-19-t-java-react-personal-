@@ -28,6 +28,9 @@ public class UserEntity implements UserDetails {
     @OneToMany(mappedBy = "author")
     private List<PublicationEntity> publications;
 
+    @OneToMany(mappedBy = "owner")
+    private List<EventEntity> events;
+
     @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<DiaryEntity> diaries;
