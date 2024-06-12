@@ -2,9 +2,7 @@
 
 
 # MiTerapia
-
-Foto de logo etc.
-
+![MiTerapia](https://github.com/Elibar19/s15-19-t-java-react-personal-/assets/111662767/da5f4dbe-e1c5-4ce1-ba3d-1b8da306cde5)
 
 ## Descripción de la App
 
