@@ -6,7 +6,6 @@ const NewsApi = () => {
     const [news, setNews] = useState()
 
     useEffect(() => {
-        console.log('obteniendo noticias...')
         fetch(url)
             .then(res => {
                 if (!res.ok) throw new Error("Error al realizar la peticion")

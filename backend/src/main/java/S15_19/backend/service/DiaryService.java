@@ -28,8 +28,9 @@ public class DiaryService implements IDiaryService {
         UserEntity userEntity = userRepository.findById(userID).orElseThrow(() -> new UserNotFoundException("Usuario No Encontrado"));
 
         DiaryEntity newDiary = DiaryEntity.builder()
+                .titulo(diaryEntityDTO.getTitulo())
                 .contenido(diaryEntityDTO.getContenido())
-                .fecha(diaryEntityDTO.getFecha())
+                .fecha(new Date())
                 .userEntity(userEntity)
                 .build();
 

@@ -1,44 +1,44 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-function Login() {
 
+function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   async function login(event) {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:8080/auth/login", {
+      const response = await axios.post("http://localhost:8080/auth/login", {
         username: username,
         password: password,
-      }).then((res) => {
-        if (res.data.message === "El usuario no existe") {
-          alert("El usuario no existe");
-        }
-        else if (res.data.message === "Login Success") {
-          localStorage.setItem('token', res.data.token)
-          navigate('/calendar');
-        }
-        else {
-          alert("El nombre de usuario o la contraseña no coinciden");
-        }
-      }, fail => {
-        console.error(fail); // Error!
       });
-    }
 
-    catch (err) {
+      const res = response.data;
+      console.log(response.data)
+      if (res.message === "El usuario no existe") {
+        alert("El usuario no existe");
+      } else if (res.message === "Login Success") {
+        const token = res.token;
+        const userID = res.id; // Obtener userID del payload del token
+        localStorage.setItem('token', token);
+        localStorage.setItem('userID', String(userID));
+        console.log(userID);
+        navigate('/welcome');
+      } else {
+        alert("El nombre de usuario o la contraseña no coinciden");
+      }
+    } catch (err) {
       alert(err);
     }
-
   }
+
   return (
     <div>
       <div className="container">
         <div className="column">
           <h2 className="text-center my-4">Login</h2>
-          {/* <hr /> */}
         </div>
         <div className="column">
           <div className="col-md-12 col-sm-12 mx-auto">
@@ -53,9 +53,7 @@ function Login() {
                   value={username}
                   autoFocus
                   required
-                  onChange={(event) => {
-                    setUsername(event.target.value);
-                  }}
+                  onChange={(event) => setUsername(event.target.value)}
                 />
               </div>
               <div className="form-group mt-2">
@@ -67,9 +65,7 @@ function Login() {
                   placeholder="*********"
                   value={password}
                   required
-                  onChange={(event) => {
-                    setPassword(event.target.value);
-                  }}
+                  onChange={(event) => setPassword(event.target.value)}
                 />
               </div>
               <div className="d-flex mt-3">

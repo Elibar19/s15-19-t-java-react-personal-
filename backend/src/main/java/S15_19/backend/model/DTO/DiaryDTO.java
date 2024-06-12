@@ -14,4 +14,5 @@ public class DiaryDTO {
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date fecha;
     private String contenido;
+    private String titulo;
 }

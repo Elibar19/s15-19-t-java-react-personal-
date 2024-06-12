@@ -31,6 +31,8 @@ public class DiaryEntity {
 
     private String contenido;
 
+    private String titulo;
+
     @PreUpdate
     public void updateFecha() {
         this.fecha = new Date();

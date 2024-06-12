@@ -129,6 +129,7 @@ public class UserService implements IUserService {
         String token = jwtService.getToken(user);
         return AuthResponse.builder()
                 .token(token)
+                .id(user.getId())
                 .message("Login Success")
                 .build();
     }

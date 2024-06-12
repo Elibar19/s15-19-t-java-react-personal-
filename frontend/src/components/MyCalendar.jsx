@@ -4,7 +4,7 @@ import moment from 'moment';
 import 'moment/locale/es';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import ModalEvents from './ModalEvents';
-import ModalDiario from './ModalDiario'; // Importa ModalDiario
+import NavBar from './NavBar';
 
 moment.locale('es');
 const localizer = momentLocalizer(moment);
@@ -38,8 +38,8 @@ function MyCalendar() {
 
   return (
     <div>
-      <ModalEvents onAddEvent={addEvent} />
-      <ModalDiario />
+      
+      {/*<ModalDiario />**/}
       <Calendar
         localizer={localizer}
         events={events}
@@ -49,6 +49,7 @@ function MyCalendar() {
         messages={messages}
         className='shadow'
       />
+      <ModalEvents onAddEvent={addEvent} />
     </div>
   );
 }
