@@ -77,3 +77,15 @@ button:focus-visible {
   white-space: nowrap;
   overflow: hidden;
 }
+
+.button{
+  background: linear-gradient(135deg, #99d532, #a4fb9f);
+}
+
+.button:hover{
+  color: #555555 ;
+}
+
+.color-brown{
+  color: #555555;
+}

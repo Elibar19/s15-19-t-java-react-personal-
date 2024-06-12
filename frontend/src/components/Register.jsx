@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Logo from '../assets/img/logo-pagina.png'
 import axios from "axios";
 function Register() {
 
@@ -29,9 +30,12 @@ function Register() {
     <div>
       <div className="container mt-4" >
         <div className="">
-          <h2 className="text-center my-4">Crear Cuenta</h2>
+          <h2 className="text-center my-4 color-brown">Crear Cuenta</h2>
 
-          <form className="form-width form-control shadow py-3 px-4 mx-auto">
+          <form className="form-width form-control shadow pt-3 px-4 mx-auto">
+            <div className="w-100 d-flex justify-content-center mb-1">
+              <img className="mx-auto rounded-circle" width={100} src={Logo} alt="" />
+            </div>
             <div className="form-group">
               <label>Username:</label>
               <input type="text" className="form-control" id="employeename" placeholder="Username"
@@ -43,7 +47,7 @@ function Register() {
                 }}
               />
             </div>
-            <div className="form-group mt-2">
+            <div className="form-group mt-1">
               <label>Nombre:</label>
               <input type="text" className="form-control" id="employeenombre" placeholder="Nombre"
                 autoFocus
@@ -54,7 +58,7 @@ function Register() {
                 }}
               />
             </div>
-            <div className="form-group mt-2">
+            <div className="form-group mt-1">
               <label>Apellido:</label>
               <input type="text" className="form-control" id="employeeapellido" placeholder="Apellido"
                 autoFocus
@@ -66,7 +70,7 @@ function Register() {
               />
             </div>
 
-            <div className="form-group mt-2">
+            <div className="form-group mt-1">
               <label>Email:</label>
               <input type="email" className="form-control" id="employeeemail" placeholder="Email"
                 autoFocus
@@ -77,8 +81,8 @@ function Register() {
                 }}
               />
             </div>
-  
-            <div className="form-group mt-2">
+
+            <div className="form-group mt-1">
               <label>Contraseña</label>
               <input type="password" className="form-control" id="password" placeholder="*********"
                 required
@@ -89,10 +93,10 @@ function Register() {
 
               />
             </div>
-            <div className="d-flex gap-2 mt-3">
-              <button type="submit" className="btn btn-primary w-100" onClick={save} >Crear cuenta</button>
+            <div className="d-flex gap-2 mt-2">
+              <button type="submit" className="btn button color-brown fw-bold w-100" onClick={save} >Crear cuenta</button>
             </div>
-            <p className="mt-3">Ya tengo una cuenta <span className="fw-bold text-primary cursor-pointer" onClick={() => navigate('/login')}>Iniciar Sesión</span></p>
+            <p className="mt-2">Ya tengo una cuenta <span className="fw-bold text-primary cursor-pointer" onClick={() => navigate('/login')}>Iniciar Sesión</span></p>
           </form>
         </div>
       </div>

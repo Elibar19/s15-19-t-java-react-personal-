@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import Logo from '../assets/img/logo-pagina.png'
 import axios from "axios";
 
 function Login() {
@@ -38,11 +39,14 @@ function Login() {
     <div>
       <div className="container">
         <div className="column">
-          <h2 className="text-center my-4">Login</h2>
+          <h2 className="text-center my-4 color-brown">Login</h2>
         </div>
         <div className="column">
           <div className="col-md-12 col-sm-12 mx-auto">
             <form className="form-width form-control shadow mx-auto py-3 px-4">
+              <div className="w-100 d-flex justify-content-center mb-2">
+                <img className="mx-auto rounded-circle" width={100} src={Logo} alt="" />
+              </div>
               <div className="form-group">
                 <label>Nombre de Usuario</label>
                 <input
@@ -69,11 +73,11 @@ function Login() {
                 />
               </div>
               <div className="d-flex mt-3">
-                <button type="submit" className="btn btn-primary w-100" onClick={login}>
+                <button type="submit" className="btn button w-100 fw-bold color-brown" onClick={login}>
                   Ingresar
                 </button>
               </div>
-              <p className="mt-3">No tengo cuenta <span className="fw-bold text-primary cursor-pointer" onClick={() => navigate('/register')}>Registrarme</span></p>
+              <p className="mt-3">No tengo cuenta <span className="fw-bold text-primary cursor-pointer color-brown" onClick={() => navigate('/register')}>Registrarme</span></p>
             </form>
           </div>
         </div>
