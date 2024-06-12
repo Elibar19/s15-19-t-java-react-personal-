@@ -34,6 +34,7 @@ public class PublicationRequestDTO {
     @NotBlank
     private String content;
 
+    @NotNull
     @DateTimeFormat(pattern="dd-MM-yyyy")
     private LocalDate publicationDate;
 }
