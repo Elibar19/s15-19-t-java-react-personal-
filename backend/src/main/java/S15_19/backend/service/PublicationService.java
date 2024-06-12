@@ -16,7 +16,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class PublicationService {
+public class PublicationService implements IPublicationService{
 
     @Autowired
     private PublicationRepository publicationRepository;
