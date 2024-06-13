@@ -4,7 +4,7 @@ import moment from 'moment';
 import 'moment/locale/es';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import ModalEvents from './ModalEvents';
-import NavBar from './NavBar';
+
 
 moment.locale('es');
 const localizer = momentLocalizer(moment);

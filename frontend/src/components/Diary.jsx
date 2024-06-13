@@ -62,7 +62,7 @@ const Diary = () => {
             required
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" className="btn btn-success" type="submit">
           Agregar Nota
         </Button>
       </Form>

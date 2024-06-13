@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Logo from '../assets/img/logo-pagina.png'
 
 const NewsApi = () => {
     // MODIFICAR URL CON UNA API QUE SI TENGA IMAGENES
@@ -23,11 +24,11 @@ const NewsApi = () => {
             {
                 news?.map((item, index) => (
                     <div key={index} className="card shadow" style={{width:'18rem' }}>
-                        <img src="https://via.placeholder.com/150" className="card-img-top" alt="Imagen de ejemplo" />
+                        <img src={Logo} className="card-img-top" alt="Imagen de ejemplo" />
                         <div className="card-body">
                             <h5 className="card-title text-ellipsis" title={item.title}>{item.title}</h5>
-                            <p className="card-text text-primary">{item.author}</p>
-                            <a href={item.url} target="blank" className="btn btn-outline-primary">Ver Noticia</a>
+                            <p className="card-text text-ellipsis">{item.author}</p>
+                            <a href={item.url} target="blank" className="btn btn-success">Ver Noticia</a>
                         </div>
                     </div>
                 ))

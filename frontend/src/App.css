@@ -11,3 +11,19 @@
 .resize-none{
   resize: none;
 }
+
+:root, body {
+  font-family: 'Nunito', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700 !important;
+  background-color: #eef5de !important;
+}
+
+h2 {
+  color: #696669 !important;
+}
+
+#navbar {
+  background-color: #cfddba !important;
+}

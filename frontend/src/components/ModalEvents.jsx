@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import es from 'date-fns/locale/es';
+import Logo from "../assets/img/icons8-logo-de-google.svg"
 
 const initialFormData = {
     'title': '',
@@ -16,10 +17,22 @@ const initialFormData = {
 function ModalEvents({ onAddEvent }) {
     const [formData, setFormData] = useState(initialFormData);
     const { startDate, endDate, description, title } = formData;
-    const [show, setShow] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [showFakeModal, setShowFakeModal] = useState(false); // Estado para el modal de simulación
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleClose = () => setShowModal(false);
+    const handleShow = () => setShowModal(true);
+
+    const handleSyncWithGoogle = () => {
+        // Mostrar el modal de simulación
+        setShowFakeModal(true);
+
+        // Simular una espera antes de cerrar el modal de simulación
+        setTimeout(() => {
+            setShowFakeModal(false);
+        }, 2000); // Cambia el tiempo según sea necesario
+    }
+
     const handleSend = () => {
         const newEvent = {
             title,
@@ -36,11 +49,15 @@ function ModalEvents({ onAddEvent }) {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button className="m-1 btn btn-success" variant="primary" onClick={handleShow}>
                 Crear Evento
             </Button>
+            <Button className="m-1 btn btn-primary" onClick={handleSyncWithGoogle}>
+                <img src={Logo} alt="Google logo" style={{ width: '20px', marginRight: '10px' }} />
+                Sincronizar con Google Calendar
+            </Button>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={showModal} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Evento Nuevo</Modal.Title>
                 </Modal.Header>
@@ -91,6 +108,16 @@ function ModalEvents({ onAddEvent }) {
                         Guardar
                     </Button>
                 </Modal.Footer>
+            </Modal>
+
+            {/* Modal de simulación */}
+            <Modal show={showFakeModal} onHide={() => setShowFakeModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Inicio de sesion</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p></p>
+                </Modal.Body>
             </Modal>
         </>
     );
