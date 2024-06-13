@@ -28,14 +28,15 @@ public class DiaryService implements IDiaryService {
         UserEntity userEntity = userRepository.findById(userID).orElseThrow(() -> new UserNotFoundException("Usuario No Encontrado"));
 
         DiaryEntity newDiary = DiaryEntity.builder()
+                .titulo(diaryEntityDTO.getTitulo())
                 .contenido(diaryEntityDTO.getContenido())
+                .fecha(new Date())
                 .userEntity(userEntity)
                 .build();
 
         DiaryEntity savedDiary = diaryRepository.save(newDiary);
 
-        // DESCOMENTAR CUANDO SE HAYA AGREGADO LA RELACION ONETOMANY EN UserEntity, UN USER TIENE MUCHOS DIARIOS
-        // userEntity.getDiaries().add(savedDiary);
+        userEntity.getDiaries().add(savedDiary);
         userRepository.save(userEntity);
 
         return savedDiary;
@@ -58,7 +59,7 @@ public class DiaryService implements IDiaryService {
             }
             return diaryRepository.save(diaryEntity);
         } else {
-            throw new DiaryNotFoundException("Diario no encontrado");
+            throw new DiaryNotFoundException("Diario "+diaryID+" no encontrado");
         }
     }
 }

@@ -1,5 +1,6 @@
 package S15_19.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -8,6 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 
 
 @Entity
@@ -16,12 +18,22 @@ import java.util.Collection;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Table(name = "user")
 public class UserEntity implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @OneToMany(mappedBy = "author")
+    private List<PublicationEntity> publications;
+
+    @OneToMany(mappedBy = "owner")
+    private List<EventEntity> events;
+
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<DiaryEntity> diaries;
 
     private String username;
 

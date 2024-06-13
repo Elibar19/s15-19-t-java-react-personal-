@@ -1,5 +1,6 @@
 package S15_19.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,6 +15,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Builder
+@Table(name = "Diary")
 public class DiaryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,12 +23,15 @@ public class DiaryEntity {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
+    @JsonBackReference
     private UserEntity userEntity;
 
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date fecha = new Date();
 
     private String contenido;
+
+    private String titulo;
 
     @PreUpdate
     public void updateFecha() {

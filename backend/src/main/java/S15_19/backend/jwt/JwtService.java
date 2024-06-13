@@ -19,29 +19,36 @@ import java.util.function.Function;
 public class JwtService {
 
     private static final String secretKey = "IUfVPfCkCApOTSRoHB4onr6XIjDCyBEdPlPGXLAgpoc";
-    public String getToken(UserEntity user){
+
+    public String getToken(UserEntity user) {
         return getToken(new HashMap<>(), user);
     }
 
     //Creamos el token
-    public String getToken(Map<String, Object> extraClaims, UserEntity user){
+    public String getToken(Map<String, Object> extraClaims, UserEntity user) {
+        Map<String, Object> userClaims = new HashMap<>(); // Personalizo el payload
+        userClaims.put("id", user.getId());
+        userClaims.put("username", user.getUsername());
+        userClaims.put("role", user.getRole());
+        userClaims.putAll(extraClaims);
+
         return Jwts.builder()
-                .setClaims(extraClaims)
+                .setClaims(userClaims)
                 .setSubject(user.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis()+1000*60*24))
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24))
                 .signWith(getSignatureKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
 
     //Metodo para obtener la firma
-    public Key getSignatureKey(){
+    public Key getSignatureKey() {
         byte[] keyBytes = Decoders.BASE64.decode(secretKey);
         return Keys.hmacShaKeyFor(keyBytes);
     }
 
     //Obtenemos todos los claims
-    private Claims getAllClaims(String token){
+    private Claims getAllClaims(String token) {
         return Jwts
                 .parserBuilder()
                 .setSigningKey(getSignatureKey())
@@ -51,7 +58,7 @@ public class JwtService {
     }
 
     //Obtenemos un claim especifico
-    public <T> T getClaim(String token, Function<Claims, T> claimsTFunction){
+    public <T> T getClaim(String token, Function<Claims, T> claimsTFunction) {
         Claims claims = getAllClaims(token);
         return claimsTFunction.apply(claims);
     }
@@ -67,12 +74,12 @@ public class JwtService {
     }
 
     //Obtener expiracion del token
-    private Date getExpiration(String token){
+    private Date getExpiration(String token) {
         return getClaim(token, Claims::getExpiration);
     }
 
     //Comprobar si esta expirado o no
-    private boolean isTokenExpired(String token){
+    private boolean isTokenExpired(String token) {
         return getExpiration(token).before(new Date(System.currentTimeMillis()));
     }
 }

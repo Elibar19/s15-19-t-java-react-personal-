@@ -67,7 +67,31 @@ button:focus-visible {
   }
 } */
 
+:root {
+  font-family: 'Nunito', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .form-width{
   max-width: 350px;
   width: 90%;
+}
+
+.text-ellipsis{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.button{
+  background: linear-gradient(135deg, #99d532, #a4fb9f);
+}
+
+.button:hover{
+  color: #555555 ;
+}
+
+.color-brown{
+  color: #555555;
 }

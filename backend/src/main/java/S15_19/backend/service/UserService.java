@@ -3,6 +3,7 @@ package S15_19.backend.service;
 import S15_19.backend.auth.AuthResponse;
 import S15_19.backend.auth.LoginRequest;
 import S15_19.backend.auth.RegisterRequest;
+import S15_19.backend.exception.UserNotFoundException;
 import S15_19.backend.jwt.JwtService;
 import S15_19.backend.model.DTO.UserRequestDTO;
 import S15_19.backend.model.DTO.UserResponseDTO;
@@ -13,34 +14,38 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class UserService implements IUserService{
+public class UserService implements IUserService {
 
     @Autowired
-    private  UserRepository userRepository;
+    private UserRepository userRepository;
     @Autowired
-    private  PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
     @Autowired
-    private  AuthenticationManager authenticationManager;
+    private AuthenticationManager authenticationManager;
     @Autowired
     private JwtService jwtService;
-
 
 
     @Override
     public Optional<List<UserResponseDTO>> listAll() {
         List<UserEntity> users = userRepository.findAll();
         return Optional.of(users.stream().map(UserResponseDTO::new).collect(Collectors.toList()));
+    }
+
+    public UserResponseDTO findByID(Integer id) throws UserNotFoundException {
+        UserEntity userEntity = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("Usuario con id: " + id + " no encontrado."));
+        UserResponseDTO userFound = new UserResponseDTO(userEntity);
+        return userFound;
     }
 
     @Override
@@ -110,7 +115,7 @@ public class UserService implements IUserService{
     }
 
     /* Se crea el metodo login. Se recupera el usuario y se autentica buscandolo en la bd y se devuelve el usuario con el JWT. */
-    public AuthResponse login(LoginRequest request){
+    public AuthResponse login(LoginRequest request) {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));
@@ -124,16 +129,21 @@ public class UserService implements IUserService{
         String token = jwtService.getToken(user);
         return AuthResponse.builder()
                 .token(token)
+                .id(user.getId())
                 .message("Login Success")
                 .build();
     }
 
     /* Creamos el metodo para registrar usuarios. Se devuelve el JWT del nuevo usuario. */
-    public AuthResponse register(RegisterRequest request){
+    public AuthResponse register(RegisterRequest request) {
         UserEntity userEntity = UserEntity.builder()
                 .username(request.getUsername())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.USER)
+                .firstName(request.getFirstName())
+                .lastName(request.getLastName())
+                .email(request.getEmail())
+                .country(request.getCountry())
                 .build();
 
         userRepository.save(userEntity);
