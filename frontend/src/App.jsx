@@ -10,6 +10,7 @@ import Welcome from "./components/Welcome";
 import CalendarPage from "./pages/CalendarPage";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import Diary from "./components/Diary";
+import UserProfile from "./components/UserProfile";
 function App() {
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
             <Route element={<ProtectedRoutes />}>
               <Route path="/calendar" element={<CalendarPage />} />
               <Route path="/diario" element={<Diary />} />
+              <Route path="/miperfil" element={<UserProfile />} />
             </Route>
           </Routes>
         </BrowserRouter>

@@ -33,10 +33,10 @@ function NavBar() {
                 <Container>
                     <div className='w-100 d-flex align-items-center justify-content-between'>
                         <Nav className="me-auto d-flex gap-2">
-                            <Nav.Link onClick={() => navigate("/calendar")}>Calendario</Nav.Link>
                             <Nav.Link onClick={() => navigate("/welcome")}>Noticias</Nav.Link>
+                            <Nav.Link onClick={() => navigate("/calendar")}>Calendario</Nav.Link>
                             <Nav.Link onClick={() => navigate("/diario")}>Diario</Nav.Link>
-                            <Nav.Link onClick={() => navigate("/diario")}>Mi perfil</Nav.Link>
+                            <Nav.Link onClick={() => navigate("/miperfil")}>Mi perfil</Nav.Link>
                         </Nav>
                         <Form className="d-flex" onSubmit={handleSubmit}>
                             <FormControl
